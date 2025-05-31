@@ -7,4 +7,17 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
+
+    /*COLORES*/
+
+    <color name="fondoMenu">#B078FC</color>
+    <color name="fondoMenu2">#4ECDC4</color>
+    <color name="fondoMenu3">#7CE5F4</color>
+    <color name="ColorBoton">#A9FDF6</color>
+    <color name="colorBotonJugar">#FFB6C1</color>
+    <color name="titulo">#105bb5</color>
+
+
 </resources>

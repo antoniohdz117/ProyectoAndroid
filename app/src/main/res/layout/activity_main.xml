@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    >
+
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KODEEX"
+        android:textColor="@color/titulo"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        />
+
+    <Button
+        android:id="@+id/contraReloj"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:text="@string/contraReloj"
+        android:backgroundTint="@color/ColorBoton"
+        android:background="@drawable/redondeo_button"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/titulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="170dp"/>
+
+    <Button
+        android:id="@+id/infinito"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:text="@string/infinito"
+        android:backgroundTint="@color/ColorBoton"
+        android:background="@drawable/redondeo_button"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/contraReloj"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"/>
+
+    <Button
+        android:id="@+id/desafio"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:text="@string/desafio"
+        android:backgroundTint="@color/ColorBoton"
+        android:background="@drawable/redondeo_button"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/infinito"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"/>
+
+    <Button
+        android:id="@+id/jugar"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:text="@string/jugar"
+        android:backgroundTint="@color/colorBotonJugar"
+        android:background="@drawable/redondeo_button"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/desafio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="170dp"/>
+    
+    <ImageButton
+        android:id="@+id/sonido"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@android:color/transparent"
+        android:layout_gravity="start"
+
+        />
+
+    <ImageButton
+        android:id="@+id/btnConfiguracion"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/configuracion_background"
+        android:background="@android:color/transparent"
+        android:layout_gravity="end"
+        android:layout_marginTop="16dp"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

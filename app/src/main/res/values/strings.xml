@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ProyectoAndroid</string>
+    <string name="titulo">KODEEX</string>
+    <string name="contraReloj">Contra Reloj</string>
+    <string name="desafio">Desafio</string>
+    <string name="infinito">Infinito</string>
+    <string name="jugar">Jugar</string>
+
 </resources>
