@@ -2,11 +2,7 @@ package com.example.proyectoandroid
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
+
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -16,18 +12,22 @@ import com.example.proyectoandroid.ui.theme.ProyectoAndroidTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            ProyectoAndroidTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
+        setContentView(R.layout.activity_main)
 
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
-        }
+
+
+
+        val btnContraReloj: Button = findViewById(R.id.contraReloj)
+        val btnInfinito: Button = findViewById(R.id.infinito)
+        val btnDesafio: Button = findViewById(R.id.desafio)
+        val btnJugar: Button = findViewById(R.id.jugar)
+        val btnSonido: ImageButton = findViewById(R.id.volumen)
+        val btnConfiguracion: ImageButton = findViewById(R.id.configuracion)
+
+        btnJugar.setOnclickListener
+
+
+
     }
 }
 
