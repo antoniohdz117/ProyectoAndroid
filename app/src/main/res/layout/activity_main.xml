@@ -75,12 +75,14 @@
 
 
 
+
+
     <ImageButton
         android:id="@+id/volumen"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:background="@drawable/volumen"
-        android:contentDescription="Botón de volumen"
+        android:contentDescription="@string/boton_volumen"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="16dp"
@@ -91,7 +93,7 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:background="@drawable/configuracion2"
-        android:contentDescription="Botón de configuración"
+        android:contentDescription="@string/boton_configuracion"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp"

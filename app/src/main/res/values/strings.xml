@@ -13,4 +13,6 @@
     <string name="mensajeCarga">Loading...</string>
     <string name="loading">Loading...</string>
     <string name="kodeex">KODEEX</string>
+    <string name="boton_volumen">Botón de volumen</string>
+    <string name="boton_configuracion">Botón de configuración</string>
 </resources>
