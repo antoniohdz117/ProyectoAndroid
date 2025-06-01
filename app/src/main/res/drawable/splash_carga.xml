@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fondo de la barra - más ovalado -->
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="30dp" /> <!-- Aumenté de 2dp a 10dp -->
+            <solid android:color="#E0E0E0" />
+        </shape>
+    </item>
+
+    <!-- Barra de progreso (parte que se llena) - también ovalada -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="20dp" /> <!-- Mismo radio que el fondo -->
+                <solid android:color="#FF6200EE" />
+
+                <!-- Opcional: añade un gradiente para mejor apariencia -->
+                <gradient
+                    android:startColor="#FF6200EE"
+                    android:endColor="#FFBB86FC"
+                    android:angle="0"/>
+            </shape>
+        </clip>
+    </item>
+</layer-list>

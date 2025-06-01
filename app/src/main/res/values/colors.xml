@@ -10,8 +10,12 @@
 
 
 
-    /*COLORES*/
+    /*COLORES splash*/
 
+    <color name="splash">#37147a</color>
+    <color name="textoSplah">#5eeff0</color>
+
+    /*COLORES splash*/
     <color name="fondoMenu">#B078FC</color>
     <color name="fondoMenu2">#4ECDC4</color>
     <color name="fondoMenu3">#7CE5F4</color>

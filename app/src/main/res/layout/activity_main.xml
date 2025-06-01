@@ -24,7 +24,7 @@
     <Button
         android:id="@+id/contraReloj"
         android:layout_width="130dp"
-        android:layout_height="30dp"
+        android:layout_height="48dp"
         android:text="@string/contraReloj"
         android:backgroundTint="@color/ColorBoton"
         android:background="@drawable/redondeo_button"
@@ -37,7 +37,7 @@
     <Button
         android:id="@+id/infinito"
         android:layout_width="130dp"
-        android:layout_height="30dp"
+        android:layout_height="48dp"
         android:text="@string/infinito"
         android:backgroundTint="@color/ColorBoton"
         android:background="@drawable/redondeo_button"
@@ -50,7 +50,7 @@
     <Button
         android:id="@+id/desafio"
         android:layout_width="130dp"
-        android:layout_height="30dp"
+        android:layout_height="48dp"
         android:text="@string/desafio"
         android:backgroundTint="@color/ColorBoton"
         android:background="@drawable/redondeo_button"
@@ -63,7 +63,7 @@
     <Button
         android:id="@+id/jugar"
         android:layout_width="120dp"
-        android:layout_height="30dp"
+        android:layout_height="48dp"
         android:text="@string/jugar"
         android:backgroundTint="@color/colorBotonJugar"
         android:background="@drawable/redondeo_button"
@@ -72,24 +72,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="170dp"/>
-    
-    <ImageButton
-        android:id="@+id/sonido"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:background="@android:color/transparent"
-        android:layout_gravity="start"
 
-        />
+
 
     <ImageButton
-        android:id="@+id/btnConfiguracion"
+        android:id="@+id/volumen"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:src="@drawable/configuracion_background"
-        android:background="@android:color/transparent"
-        android:layout_gravity="end"
-        android:layout_marginTop="16dp"/>
+        android:background="@drawable/volumen"
+        android:contentDescription="Botón de volumen"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <ImageButton
+        android:id="@+id/configuracion"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/configuracion2"
+        android:contentDescription="Botón de configuración"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp" />
+
 
 
 
