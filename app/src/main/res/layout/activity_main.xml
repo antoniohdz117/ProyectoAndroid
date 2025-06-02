@@ -64,14 +64,15 @@
         android:id="@+id/jugar"
         android:layout_width="120dp"
         android:layout_height="48dp"
-        android:text="@string/jugar"
-        android:backgroundTint="@color/colorBotonJugar"
+        android:layout_marginTop="170dp"
         android:background="@drawable/redondeo_button"
+        android:backgroundTint="@color/colorBotonJugar"
+        android:onClick="setPlayView"
+        android:text="@string/jugar"
         android:textSize="12sp"
-        app:layout_constraintTop_toBottomOf="@id/desafio"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="170dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/desafio" />
 
 
 

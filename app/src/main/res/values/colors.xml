@@ -5,6 +5,7 @@
     <color name="splash">#37147a</color>
     <color name="textoSplah">#5eeff0</color>
     <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
 
     /*COLORES menu*/
     <color name="fondoMenu">#B078FC</color>

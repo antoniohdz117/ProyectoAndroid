@@ -8,9 +8,11 @@
     <string name="jugar">Jugar</string>
 
 
-
     /*string de SPLASH*/
     <string name="mensajeCarga">Loading...</string>
     <string name="loading">Loading...</string>
     <string name="kodeex">KODEEX</string>
+    <string name="pista">\? Pista</string>
+    <string name="goback">GoBack</string>
+    <string name="settings">Settings</string>
 </resources>
