@@ -6,13 +6,13 @@ import android.util.Log
 
 class Generador {
     companion object{
-        suspend fun generarSopa(client: HttpClient, dimension: Int): Pair<String, List<String>> {
+        suspend fun generarSopa(client: HttpClient, dimension: Int): Pair<String, MutableList<String>> {
             val matriz = Matrix(dimension)
             var intentos = 0
             val maxIntentos = 100
 
             Log.i(TAG, "Iniciando generación de sopa de letras con dimensión: $dimension")
-            while (matriz.libres > 0 && intentos < maxIntentos) {
+            while (intentos < maxIntentos) {
                 val palabra = ApiService.obtenerPalabra(client)?.uppercase()
 
                 Log.i(TAG, "Intento $intentos: Colocando palabra '$palabra' en la matriz")
@@ -22,16 +22,16 @@ class Generador {
                     if (colocada) {
                         Log.d(TAG, "Palabra insertada: $palabra")
                     } else{
-                        Log.w(TAG, "No se pudo colocar la palabra: $palabra")
-                        intentos++
+                        Log.w(TAG, "La matriz ya se lleno: ${matriz.ocupacion.count { it }} celdas ocupadas")
+                        return Pair(matriz.matrix.concatToString() , matriz.palabras)
                     }
                 } else {
                     Log.w(TAG, "Palabra nula o demasiado larga: $palabra")
                     intentos++
                 }
             }
-            Log.i(TAG, "Generación de sopa completada. Intentos realizados: $intentos ${matriz.libres} espacios libres restantes.")
-            return Pair(matriz.toString(), matriz.palabras)
+            Log.i(TAG, "Generación de sopa completada. Intentos realizados: $intentos")
+            return Pair(matriz.matrix.concatToString(), matriz.palabras)
         }
 
     }
