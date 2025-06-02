@@ -9,12 +9,14 @@ import android.view.MotionEvent
 import android.view.View
 import android.widget.TextView
 import androidx.gridlayout.widget.GridLayout
+import com.google.android.material.textview.MaterialTextView
 
 class SwipeCursor(
     private val sopa: String,
     private val dimension: Int,
     private val gridLayout: GridLayout,
-    private val resaltador: Drawable?
+    private val resaltador: Drawable?,
+    private val palabrasPendientes: MutableList<MaterialTextView>
 ) {
 
     private val palabraActual = StringBuilder()
@@ -107,14 +109,35 @@ class SwipeCursor(
 
                 MotionEvent.ACTION_UP -> {
                     Log.i("SopaSwipe", "Palabra final: $palabraActual")
+                    val encontrada = verificarPalabraEncontrada()
+                    if(!encontrada){
+                        limpiarCeldasResaltadas()
+                    }
                     palabraActual.clear()
-                    limpiarCeldasResaltadas()
                     coordenadasVisitadas.clear()
                     direccion = null
                     ultimaCelda = null
+
+                    if(palabrasPendientes.isEmpty()) {
+                        Log.i("SopaSwipe", "¡Todas las palabras encontradas!")
+                    }
                 }
             }
             true
         }
     }
+
+    private fun verificarPalabraEncontrada(): Boolean {
+        val palabra = palabraActual.toString()
+
+        for ( tv in palabrasPendientes) {
+            if (tv.text.toString() == palabra) {
+                tv.visibility = View.GONE
+                Log.i("SopaSwipe", "¡Palabra encontrada: $palabra!")
+                return true
+            }
+        }
+        return false
+    }
+
 }

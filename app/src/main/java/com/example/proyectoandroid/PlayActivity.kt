@@ -43,7 +43,7 @@ class PlayActivity : AppCompatActivity() {
 
         lifecycleScope.launch {
             Log.i(TAG, "Iniciando generador de sopa")
-            val (matriz, palabras) = Generador.generarSopa(client, 8)
+            val (matriz, palabras) = Generador.generarSopa(client, 10)
             Log.i(TAG, "Sopa generada: $matriz")
             Log.i(TAG, "Palabras encontradas: $palabras")
 
@@ -54,11 +54,11 @@ class PlayActivity : AppCompatActivity() {
             binding.barraProgreso.visibility = View.GONE
             binding.mensajeCarga.visibility = View.GONE
 
-            usarDimensiones(8, matriz)
-            llenarFlexbox(palabras)
+            usarDimensiones(10, matriz)
+            var palabrasTV = llenarFlexbox(palabras)
 
             var drawable = ContextCompat.getDrawable(this@PlayActivity, R.drawable.celda_resaltada)
-            val swipeCursor = SwipeCursor(matriz, 8, binding.gridLetras, drawable)
+            val swipeCursor = SwipeCursor(matriz, 10, binding.gridLetras, drawable, palabrasTV)
             binding.gridLetras.setOnTouchListener(swipeCursor.getTouchListener())
 
         }
@@ -70,8 +70,10 @@ class PlayActivity : AppCompatActivity() {
     }
 
 
-    private fun llenarFlexbox(palabras: List<String>) {
+    private fun llenarFlexbox(palabras: List<String>): MutableList<MaterialTextView> {
         val flexbox = binding.wordList
+        val listaPalabrasTV = mutableListOf<MaterialTextView>()
+
         flexbox.removeAllViews()
 
         for (palabra in palabras) {
@@ -86,7 +88,9 @@ class PlayActivity : AppCompatActivity() {
                 height = 100
             }
             flexbox.addView(textView)
+            listaPalabrasTV.add(textView)
         }
+        return listaPalabrasTV
     }
 
 
