@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TopRoundedCorners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">20dp</item>
+        <item name="cornerSizeTopRight">20dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+    <style name="TextAppearance.Fredoka" parent="TextAppearance.Material3.BodyMedium">
+        <item name="fontFamily">@font/fredoka_semibold</item>
+        <item name="android:fontFamily">@font/fredoka_semibold</item>
+    </style>
+</resources>
