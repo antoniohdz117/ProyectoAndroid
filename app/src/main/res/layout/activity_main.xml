@@ -76,7 +76,6 @@
 
 
 
-
     <ImageButton
         android:id="@+id/volumen"
         android:layout_width="48dp"
@@ -93,11 +92,12 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:background="@drawable/configuracion2"
-        android:contentDescription="@string/boton_configuracion"
+        android:contentDescription="@string/configuracion"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp" />
+
 
 
 

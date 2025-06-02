@@ -29,6 +29,8 @@
 
     /*TABLERO*/
     <color name="tablero">#c2c9c1</color>
+    <color name="pista">#99e7ea</color>
+
 
 
 

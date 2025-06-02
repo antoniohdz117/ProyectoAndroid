@@ -15,4 +15,23 @@
     <string name="kodeex">KODEEX</string>
     <string name="boton_volumen">Botón de volumen</string>
     <string name="boton_configuracion">Botón de configuración</string>
+    <string name="configuracion">Configuracion</string>
+
+    <string name="politica_de_privacidad" >Política de privacidad</string>
+    <string name="sonido" />
+    <string name="notificaciones">Notificaciones</string>
+    <string name="dificultad">Dificultad</string>
+    <string name="pol_tica_de_privacidad">Política de privacidad</string>
+    <string name="versi_n">Versión</string>
+    <string name="_1_0_0_0">1.0.0.0</string>
+
+
+    <string-array name="dificultad">
+        <item>Fácil</item>
+        <item>Intermedio</item>
+        <item>Difícil</item>
+    </string-array>
+
+
+
 </resources>
