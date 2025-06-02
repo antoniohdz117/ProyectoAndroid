@@ -61,7 +61,12 @@ class PlayActivity : AppCompatActivity() {
             val swipeCursor = SwipeCursor(matriz, 10, binding.gridLetras, drawable, palabrasTV)
             binding.gridLetras.setOnTouchListener(swipeCursor.getTouchListener())
 
+
+
         }
+
+
+
     }
 
     fun goHome(view: View){
@@ -127,6 +132,12 @@ class PlayActivity : AppCompatActivity() {
             }
             grid.addView(textView)
         }
+    }
+
+
+    private fun mostrarDialogoGanaste() {
+        val dialog = GanasteFragment()
+        dialog.show(supportFragmentManager, "Ganaste Dialogo")
     }
 
 }
