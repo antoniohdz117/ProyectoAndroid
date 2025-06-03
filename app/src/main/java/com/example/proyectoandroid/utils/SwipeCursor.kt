@@ -18,11 +18,11 @@ class SwipeCursor(
     private val resaltador: Drawable?,
     private val palabrasPendientes: MutableList<MaterialTextView>
 ) {
-
     private val palabraActual = StringBuilder()
     private val coordenadasVisitadas = mutableSetOf<Pair<Int, Int>>()
     private var direccion: Pair<Int, Int>? = null
     private var ultimaCelda: Pair<Int, Int>? = null
+
 
     // Tiempo mínimo entre procesamientos en ms (ajustable)
     private val throttleInterval = 50L
