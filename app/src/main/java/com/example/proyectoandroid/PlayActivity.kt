@@ -58,7 +58,7 @@ class PlayActivity : AppCompatActivity() {
             var palabrasTV = llenarFlexbox(palabras)
 
             var drawable = ContextCompat.getDrawable(this@PlayActivity, R.drawable.celda_resaltada)
-            val swipeCursor = SwipeCursor(matriz, 10, binding.gridLetras, drawable, palabrasTV)
+            val swipeCursor = SwipeCursor(this@PlayActivity, matriz, 10, binding.gridLetras, drawable, palabrasTV)
             binding.gridLetras.setOnTouchListener(swipeCursor.getTouchListener())
 
 
@@ -73,6 +73,9 @@ class PlayActivity : AppCompatActivity() {
         val intent = Intent(this,MainActivity::class.java)
         startActivity(intent)
     }
+
+
+
 
 
     private fun llenarFlexbox(palabras: List<String>): MutableList<MaterialTextView> {
@@ -134,10 +137,26 @@ class PlayActivity : AppCompatActivity() {
         }
     }
 
-
-    private fun mostrarDialogoGanaste() {
-        val dialog = GanasteFragment()
-        dialog.show(supportFragmentManager, "Ganaste Dialogo")
+    fun mostrarFelicidadesYVolver() {
+        val builder = androidx.appcompat.app.AlertDialog.Builder(this)
+        builder.setTitle("¡Felicidades!")
+        builder.setMessage("Has completado la sopa de letras.")
+        builder.setCancelable(false)
+        builder.setPositiveButton("Cerrar") { dialog, _ ->
+            dialog.dismiss()
+            val intent = Intent(this, MainActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
+            finish()
+        }
+        builder.show()
     }
+
+
+    fun mostrarDialogoGanaste() {
+        val dialog = GanasteFragment()
+        dialog.show(supportFragmentManager, "GanasteDialogo")
+    }
+
 
 }

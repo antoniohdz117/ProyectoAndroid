@@ -9,9 +9,11 @@ import android.view.MotionEvent
 import android.view.View
 import android.widget.TextView
 import androidx.gridlayout.widget.GridLayout
+import com.example.proyectoandroid.PlayActivity
 import com.google.android.material.textview.MaterialTextView
 
 class SwipeCursor(
+    private val actividad: PlayActivity, // ← NUEVO
     private val sopa: String,
     private val dimension: Int,
     private val gridLayout: GridLayout,
@@ -120,6 +122,7 @@ class SwipeCursor(
 
                     if(palabrasPendientes.isEmpty()) {
                         Log.i("SopaSwipe", "¡Todas las palabras encontradas!")
+                        actividad.mostrarDialogoGanaste()
                     }
                 }
             }
